@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "My first project on Hexlet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slava-TVA/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "first",
+    "project"
+  ],
+  "author": "Vyacheslav Tikhonov aka Chaka",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Slava-TVA/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Slava-TVA/frontend-project-lvl1#readme"
+}
