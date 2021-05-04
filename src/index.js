@@ -8,7 +8,7 @@ export default () => {
   console.log(`Hello, ${name}!`);
 };
 
-const isEven = () => {
+const isEvenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const num = Math.floor(Math.random() * 100);
@@ -43,7 +43,13 @@ const calcExp = (mathSymbol, a, b) => {
   }
 };
 
-const calc = () => {
+const gcd = (a, b) => {
+  if (b > a) return gcd(b, a);
+  if (!b) return a;
+  return gcd(b, a % b);
+};
+
+const calcGame = () => {
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const num1 = Math.floor(Math.random() * 100);
@@ -67,4 +73,25 @@ const calc = () => {
   }
 };
 
-export { isEven, calc };
+const gcdGame = () => {
+  console.log('Find the greatest common divisor of given numbers.');
+  for (let i = 0; i < 3; i += 1) {
+    const num1 = Math.floor(Math.random() * 100);
+    const num2 = Math.floor(Math.random() * 100);
+    console.log(`Question: ${num1} ${num2}`);
+    const answer = readlineSync.question('Your answer: ');
+    const correctAnswer = String(gcd(num1, num2));
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
+    if (i === 2) {
+      console.log(`Congratulations, ${name}!`);
+    }
+  }
+};
+
+export { isEvenGame, calcGame, gcdGame };
