@@ -94,4 +94,40 @@ const gcdGame = () => {
   }
 };
 
-export { isEvenGame, calcGame, gcdGame };
+const progressionGame = () => {
+  console.log('What number is missing in the progression?');
+  for (let i = 0; i < 3; i += 1) {
+    let term = getRandomInRange(1, 100);
+    const difference = getRandomInRange(5, 50);
+    const progressionLength = getRandomInRange(5, 10);
+    const hiddenIndex = getRandomInRange(0, progressionLength - 1);
+    let hiddenItem;
+    let str = `${term}`;
+    for (let k = 0; k < progressionLength; k += 1) {
+      term += difference;
+      if (k === hiddenIndex) {
+        str = `${str} ..`;
+        hiddenItem = term;
+      } else {
+        str = `${str} ${term}`;
+      }
+    }
+    console.log(`Question: ${str}`);
+    const answer = readlineSync.question('Your answer: ');
+    const correctAnswer = String(hiddenItem);
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
+    if (i === 2) {
+      console.log(`Congratulations, ${name}!`);
+    }
+  }
+};
+
+export {
+  isEvenGame, calcGame, gcdGame, progressionGame,
+};
