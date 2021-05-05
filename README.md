@@ -4,4 +4,5 @@
 [![Eslint status](https://github.com/Slava-TVA/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)](https://github.com/Slava-TVA/frontend-project-lvl1/actions)  
 [Brain even](https://asciinema.org/a/411084)  
 [Brain calc](https://asciinema.org/a/411617)  
-[Brain gcd](https://asciinema.org/a/411650)
+[Brain gcd](https://asciinema.org/a/411650)  
+[Brain progression](https://asciinema.org/a/412126)  
