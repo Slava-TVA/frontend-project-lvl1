@@ -6,3 +6,4 @@
 [Brain calc](https://asciinema.org/a/411617)  
 [Brain gcd](https://asciinema.org/a/411650)  
 [Brain progression](https://asciinema.org/a/412126)  
+[Brain prime](https://asciinema.org/a/413167)  
